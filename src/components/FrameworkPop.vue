@@ -5,11 +5,17 @@ const props = withDefaults(
     name: string;
     img: string;
     rating: number;
+    index: number;
   }>(),
   {
     rating: 10,
   }
 );
+
+const emits = defineEmits<{
+  (e: "change", index: number, rating: number): void;
+}>();
+
 // const props = defineProps({
 //   name: {
 //     type: String,
@@ -28,9 +34,11 @@ const props = withDefaults(
 const count = ref(props.rating);
 function inc() {
   count.value++;
+  emits("change", props.index, count.value);
 }
 function dec() {
   count.value--;
+  emits("change", props.index, count.value);
 }
 </script>
 
