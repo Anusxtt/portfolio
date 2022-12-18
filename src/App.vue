@@ -11,15 +11,39 @@
     </v-app-bar>
 
     <v-main>
-      <v-container>
-        <v-icon :icon="mdiVuetify"></v-icon>
-        <v-icon :icon="mdiCursorPointer"></v-icon>
-        <v-btn class="ma-2" color="primary">
-          Accept
-          <v-icon end :icon="mdiCheckboxMarkedCircle"></v-icon>
-        </v-btn>
-        Content area</v-container
-      >
+      <router-view></router-view>
+      <v-navigation-drawer expand-on-hover rail permanent>
+        <v-list>
+          <v-list-item
+            prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
+            title="Sandra Adams"
+            subtitle="sandra_a88@gmailcom"
+          ></v-list-item>
+        </v-list>
+
+        <v-divider></v-divider>
+
+        <v-list density="compact" nav>
+          <v-list-item
+            :prepend-icon="mdiFolder"
+            title="My Files"
+            value="myfiles"
+            to="/my-files-view"
+          ></v-list-item>
+          <v-list-item
+            :prepend-icon="mdiAccountMultiple"
+            title="Shared with me"
+            value="shared"
+            to="/share-with-me"
+          ></v-list-item>
+          <v-list-item
+            :prepend-icon="mdiStar"
+            title="Starred"
+            value="starred"
+            to="/starred"
+          ></v-list-item>
+        </v-list>
+      </v-navigation-drawer>
     </v-main>
   </v-app>
 </template>
@@ -32,6 +56,9 @@ import {
   mdiCursorPointer,
   mdiVuetify,
   mdiCheckboxMarkedCircle,
+  mdiFolder,
+  mdiAccountMultiple,
+  mdiStar,
 } from "@mdi/js";
 
 const theme = ref("light");
