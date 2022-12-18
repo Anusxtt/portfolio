@@ -15,9 +15,9 @@
       <v-navigation-drawer expand-on-hover rail permanent>
         <v-list>
           <v-list-item
-            prepend-avatar="https://randomuser.me/api/portraits/women/85.jpg"
-            title="Sandra Adams"
-            subtitle="sandra_a88@gmailcom"
+            prepend-avatar="https://cdn.discordapp.com/attachments/955028901451694113/1054035508675751936/IMG_4902.jpg"
+            title="Anusit Na bangchang"
+            subtitle="64160151@go.buu.ac.th"
           ></v-list-item>
         </v-list>
 
@@ -32,9 +32,9 @@
           ></v-list-item>
           <v-list-item
             :prepend-icon="mdiAccountMultiple"
-            title="Shared with me"
-            value="shared"
-            to="/share-with-me"
+            title="My profile"
+            value="myprofile"
+            to="/my-profile"
           ></v-list-item>
           <v-list-item
             :prepend-icon="mdiStar"
