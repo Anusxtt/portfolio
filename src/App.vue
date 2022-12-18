@@ -53,9 +53,6 @@ import { ref } from "vue";
 import {
   mdiWeatherSunny,
   mdiWeatherNight,
-  mdiCursorPointer,
-  mdiVuetify,
-  mdiCheckboxMarkedCircle,
   mdiFolder,
   mdiAccountMultiple,
   mdiStar,
